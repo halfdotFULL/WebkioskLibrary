@@ -1,7 +1,7 @@
 package com.nexflare.webkiosklibrary.Utils;
 
 /**
- * Created by nexflare on 24/09/17.
+ * Created by Dheerain on 24-09-2017.
  */
 
 public class Constants {
