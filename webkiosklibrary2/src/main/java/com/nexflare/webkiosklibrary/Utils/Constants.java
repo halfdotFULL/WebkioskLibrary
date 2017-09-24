@@ -5,6 +5,6 @@ package com.nexflare.webkiosklibrary.Utils;
  */
 
 public class Constants {
-    public static final String BASE_URL_THAPAR="https://webkiosk.thapar.edu/CommonFiles/UserAction.jsp";
-    public static final String BASE_URL_WEBKISOK="https://webkiosk.jiit.ac.in/CommonFiles/UserActionn.jsp";
+    public static final String BASE_URL_THAPAR="https://webkiosk.thapar.edu";
+    public static final String BASE_URL_WEBKISOK="https://webkiosk.jiit.ac.in/";
 }
