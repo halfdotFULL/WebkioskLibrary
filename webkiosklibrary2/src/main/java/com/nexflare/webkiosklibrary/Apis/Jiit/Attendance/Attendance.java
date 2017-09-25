@@ -7,10 +7,21 @@ package com.nexflare.webkiosklibrary.Apis.Jiit.Attendance;
 public class Attendance {
     private String subjectName;
     private String subjectCode;
-    private Integer lectureAttendace;
+    private Integer lectureAttendance;
     private Integer tutorialAttendance;
     private Integer practicalAttendance;
     private Integer overallAttendance;
+
+    public String getDetailAttendanceUrl() {
+        return detailAttendanceUrl;
+    }
+
+    public void setDetailAttendanceUrl(String detailAttendanceUrl) {
+        this.detailAttendanceUrl = detailAttendanceUrl;
+    }
+
+    private String detailAttendanceUrl;
+
 
     public String getSubjectName() {
         return subjectName;
@@ -29,11 +40,11 @@ public class Attendance {
     }
 
     public Integer getLectureAttendace() {
-        return lectureAttendace;
+        return lectureAttendance;
     }
 
     public void setLectureAttendace(Integer lectureAttendace) {
-        this.lectureAttendace = lectureAttendace;
+        this.lectureAttendance = lectureAttendace;
     }
 
     public Integer getTutorialAttendance() {
@@ -59,4 +70,18 @@ public class Attendance {
     public void setOverallAttendance(Integer overallAttendance) {
         this.overallAttendance = overallAttendance;
     }
+
+    @Override
+    public String toString() {
+        return "Attendance{" +
+                "subjectName='" + subjectName + '\'' +
+                ", subjectCode='" + subjectCode + '\'' +
+                ", overallAttendance=" + overallAttendance +
+                ", lectureAttendance=" + lectureAttendance +
+                ", tutorialAttendance=" + tutorialAttendance +
+                ", practicalAttendance=" + practicalAttendance +
+                ", detailAttendanceUrl='" + detailAttendanceUrl + '\'' +
+                '}';
+    }
 }
+
