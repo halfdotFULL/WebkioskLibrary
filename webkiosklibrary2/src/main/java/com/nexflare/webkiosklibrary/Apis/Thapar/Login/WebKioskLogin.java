@@ -91,11 +91,11 @@ public class WebKioskLogin implements WebkioskContract<LoginResult>{
     }
     @Override
     public void addResultCallback(ResultCallback<LoginResult> resultCallback) {
-
+        this.mCallBback = resultCallback;
     }
 
     @Override
     public void removeCallback() {
-
+        this.mCallBback = null;
     }
 }
