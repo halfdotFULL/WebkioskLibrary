@@ -5,5 +5,5 @@ package com.nexflare.webkiosklibrary.Apis.Jiit.Cgpa;
  */
 
 public class WebkioskCgpaReport {
-    
+
 }
