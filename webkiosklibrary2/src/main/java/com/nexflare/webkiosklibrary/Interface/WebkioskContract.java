@@ -5,6 +5,9 @@ package com.nexflare.webkiosklibrary.Interface;
  */
 
 public interface WebkioskContract<T> {
+
     public void addResultCallback(ResultCallback<T> resultCallback);
+
+
     public void removeCallback();
 }
