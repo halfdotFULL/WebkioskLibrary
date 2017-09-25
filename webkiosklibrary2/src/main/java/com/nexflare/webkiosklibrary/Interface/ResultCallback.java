@@ -6,7 +6,7 @@ package com.nexflare.webkiosklibrary.Interface;
 
 public interface ResultCallback<T> {
 
-    void onResult(T resukt);
+    void onResult(T result);
 
     void onError(Exception e);
 
