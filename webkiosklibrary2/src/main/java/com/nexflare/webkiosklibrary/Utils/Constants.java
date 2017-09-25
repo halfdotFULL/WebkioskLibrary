@@ -6,6 +6,7 @@ package com.nexflare.webkiosklibrary.Utils;
 
 public class Constants {
 
+    public static final String URL_QUERY_PARAM = "?x=&exam=";
     public static final String BASE_URL_THAPAR="https://webkiosk.thapar.edu";
     public static final String BASE_URL_JIIT="https://webkiosk.jiit.ac.in/";
     public static final String BASE_URL_JIIT_LOGIN="https://webkiosk.jiit.ac.in/StudentFiles/StudentPage.jsp";
