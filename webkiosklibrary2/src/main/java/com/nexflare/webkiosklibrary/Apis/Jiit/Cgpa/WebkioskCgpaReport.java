@@ -8,6 +8,7 @@ import com.nexflare.webkiosklibrary.Apis.Jiit.WebkioskCredentials;
 import com.nexflare.webkiosklibrary.Interface.ResultCallback;
 import com.nexflare.webkiosklibrary.Interface.WebkioskContract;
 import com.nexflare.webkiosklibrary.Utils.Constants;
+import com.nexflare.webkiosklibrary.Utils.StringUtility;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
