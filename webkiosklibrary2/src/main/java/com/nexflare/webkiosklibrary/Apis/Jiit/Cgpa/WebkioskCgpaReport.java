@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.nexflare.webkiosklibrary.Activity.Cookies;
+import com.nexflare.webkiosklibrary.Apis.Jiit.WebkioskCredentials;
 import com.nexflare.webkiosklibrary.Interface.ResultCallback;
 import com.nexflare.webkiosklibrary.Interface.WebkioskContract;
 import com.nexflare.webkiosklibrary.Utils.Constants;
