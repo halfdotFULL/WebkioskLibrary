@@ -11,6 +11,8 @@ public class WebkioskCredentials {
     private String password;
     private String college;
 
+/*The value of the college here has to be JIIT J128 beacause this is Jaypee Branch*/
+
     public WebkioskCredentials(String enrollmentNumber, String dateOfBirth, String password, String college) {
         this.enrollmentNumber = enrollmentNumber;
         this.dateOfBirth = dateOfBirth;
