@@ -5,6 +5,7 @@ import android.os.Looper;
 
 import com.nexflare.webkiosklibrary.Activity.Cookies;
 import com.nexflare.webkiosklibrary.Apis.Jiit.WebkioskCredentials;
+import com.nexflare.webkiosklibrary.Exceptions.InvalidCredentialsException;
 import com.nexflare.webkiosklibrary.Interface.ResultCallback;
 import com.nexflare.webkiosklibrary.Interface.WebkioskContract;
 import com.nexflare.webkiosklibrary.Utils.Constants;
@@ -109,7 +110,8 @@ public class WebkioskCgpaReport implements WebkioskContract<CgpaReportResult>{
                         });
                     }
                 }
-            };
+            });
+
             thread.start();
 
             return this;
