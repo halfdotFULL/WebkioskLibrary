@@ -10,8 +10,8 @@ import java.util.List;
 public class AttendanceResult {
     ArrayList<Attendance> attendanceList;
 
-    public AttendanceResult(ArrayList<Attendance> attendanceList) {
-        this.attendanceList = attendanceList;
+    public AttendanceResult() {
+        this.attendanceList = new ArrayList<>();
     }
 
     public List<Attendance> getAttendanceList() {
