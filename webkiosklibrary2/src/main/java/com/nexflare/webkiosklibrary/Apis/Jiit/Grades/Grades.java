@@ -10,13 +10,6 @@ public class Grades {
     private String examCode;
     private String examGrade;
 
-    public Grades(String subjectName, String subjectCode, String examCode, String examGrade) {
-        this.subjectName = subjectName;
-        this.subjectCode = subjectCode;
-        this.examCode = examCode;
-        this.examGrade = examGrade;
-    }
-
     public String getSubjectName() {
         return subjectName;
     }
