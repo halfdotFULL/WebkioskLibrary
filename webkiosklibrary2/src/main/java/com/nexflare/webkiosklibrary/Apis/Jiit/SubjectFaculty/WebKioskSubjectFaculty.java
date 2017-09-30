@@ -52,7 +52,7 @@ public class WebKioskSubjectFaculty  implements WebkioskContract<SubjectFacultyR
 
                     final SubjectFacultyResult subjectFacultyResult = new SubjectFacultyResult();
 
-                    if(document.body().toString().contains("session timeout")){
+                    if(document.body().toString().toLowerCase().contains("session timeout")){
 
                         throw new InvalidCredentialsException();
                     }else{
@@ -115,11 +115,11 @@ public class WebKioskSubjectFaculty  implements WebkioskContract<SubjectFacultyR
     }
     @Override
     public void addResultCallback(ResultCallback<SubjectFacultyResult> resultCallback) {
-
+        this.mCallback = resultCallback;
     }
 
     @Override
     public void removeCallback() {
-
+        this.mCallback= null;
     }
 }
