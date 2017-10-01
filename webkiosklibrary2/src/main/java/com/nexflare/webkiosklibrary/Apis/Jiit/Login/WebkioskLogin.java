@@ -37,7 +37,7 @@ public class WebkioskLogin implements WebkioskContract<LoginResult> {
 
                 try {
                     Map<String, String> cookies = Cookies.getCookiesForJaypee(enrollmentNumber, dateOfBirth , password, college);
-                    Document document = Jsoup.connect("https;//webkiosk.jiit.ac.in/StudentFiles/StudentPage.jsp")
+                    Document document = Jsoup.connect(Constants.BASE_URL_JIIT_LOGIN)
                             .cookies(cookies)
                             .userAgent(Constants.AGENT_MOZILLA)
                             .execute().parse();
