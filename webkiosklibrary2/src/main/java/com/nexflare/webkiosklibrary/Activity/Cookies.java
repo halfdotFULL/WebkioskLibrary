@@ -21,7 +21,7 @@ public class Cookies {
                 .userAgent(Constants.AGENT_MOZILLA)
                 .execute();
 
-        Connection.Response studentPage = Jsoup.connect(Constants.BASE_URL_JIIT_LOGIN)
+        Connection.Response studentPage = Jsoup.connect("https://webkiosk.jiit.ac.in/CommonFiles/UserActionn.jsp")
                 .data("txtInst", "Institute")
                 .data("InstCode", college)
                 .data("txtuType", "Member Type")
