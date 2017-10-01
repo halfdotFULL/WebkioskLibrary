@@ -4,6 +4,8 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.nexflare.webkiosklibrary.Activity.Cookies;
+import com.nexflare.webkiosklibrary.Apis.Jiit.WebkioskCredentials;
+import com.nexflare.webkiosklibrary.Interface.ResultCallback;
 import com.nexflare.webkiosklibrary.Interface.WebkioskContract;
 import com.nexflare.webkiosklibrary.Utils.Constants;
 
@@ -17,15 +19,15 @@ import java.util.Map;
  */
 
 
-public class KioskLogin implements WebkioskContract<LoginResult> {
+public class WebkioskLogin implements WebkioskContract<LoginResult> {
     private ResultCallback<LoginResult> mCallback;
     private Handler mResultHandler;
 
-    public KioskLogin() {
+    public WebkioskLogin() {
         mResultHandler = new Handler(Looper.getMainLooper());
     }
 
-    public KioskLogin login(final String enrollmentNumber,final String dateOfBirth, final String password, final String college) {
+    public WebkioskLogin login(final String enrollmentNumber, final String dateOfBirth, final String password, final String college) {
 
         Thread thread = new Thread() {
 
@@ -36,7 +38,7 @@ public class KioskLogin implements WebkioskContract<LoginResult> {
                 try {
                     Map<String, String> cookies = Cookies.getCookiesForJaypee(enrollmentNumber, dateOfBirth , password, college);
                     Document document = Jsoup.connect("https;//webkiosk.jiit.ac.in/StudentFiles/StudentPage.jsp")
-                            .cookie(cookies)
+                            .cookies(cookies)
                             .userAgent(Constants.AGENT_MOZILLA)
                             .execute().parse();
 
@@ -77,17 +79,17 @@ public class KioskLogin implements WebkioskContract<LoginResult> {
         thread.start();
 
 
-        return this
+        return this;
     }
 
-    public KioskLogin login(WebkioskCredentials credentials) {
+    public WebkioskLogin login(WebkioskCredentials credentials) {
         login(credentials.getEnrollmentNumber(), credentials.getDateOfBirth(), credentials.getPassword(), credentials.getCollege());
         return this;
     }
 
 
     @Override
-    public void addResultCallback(ResultCallbackContract<LoginResult> callback) {
+    public void addResultCallback(ResultCallback<LoginResult> callback) {
         this.mCallback = callback;
     }
 
