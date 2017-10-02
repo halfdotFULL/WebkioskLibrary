@@ -1,11 +1,9 @@
-package com.nexflare.webkiosklibrary;
+package com.nexflare.webkiosklibrary.Activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
 
-import com.nexflare.webkiosklibrary.Apis.Jiit.Login.LoginResult;
-import com.nexflare.webkiosklibrary.Interface.ResultCallback;
+import com.nexflare.webkiosklibrary.R;
 
 
 public class MainActivity extends AppCompatActivity {
