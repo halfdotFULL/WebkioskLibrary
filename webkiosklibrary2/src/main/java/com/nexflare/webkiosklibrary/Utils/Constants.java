@@ -13,5 +13,6 @@ public class Constants {
     public static final String BASE_URL_THAPAR_LOGIN="https://webkiosk.thapar.edu/StudentFiles/StudentPage.jsp";
     public static final String AGENT_MOZILLA = "Mozilla";
     public static final String INITIAL_URL_JIIT_ACADEMIC = "https://webkiosk.jiit.ac.in/StudentFiles/Academic/";
+    public static final String INITIAL_URL_THAPAR_ACADEMIC = "https://webkiosk.thapar.edu/StudentFiles/Academic/";
 
 }
