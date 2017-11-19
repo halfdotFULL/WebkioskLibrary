@@ -47,7 +47,7 @@ public class Cookies {
                 .userAgent(Constants.AGENT_MOZILLA)
                 .execute();
 
-        Connection.Response studentPage = Jsoup.connect(Constants.BASE_URL_THAPAR_LOGIN)
+        Connection.Response studentPage = Jsoup.connect("https://webkiosk.thapar.edu/CommonFiles/UserAction.jsp")
                 .data("txtuType", "Member Type")
                 .data("UserType", "S")
                 .data("txtCode", "Enrollment No")
