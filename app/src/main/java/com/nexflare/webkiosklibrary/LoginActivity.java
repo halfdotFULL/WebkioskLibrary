@@ -4,12 +4,14 @@ import android.app.ProgressDialog;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.nexflare.webkiosklibrary.Apis.Jiit.Attendance.AttendanceResult;
 import com.nexflare.webkiosklibrary.Apis.Thapar.Login.LoginResult;
 import com.nexflare.webkiosklibrary.Interface.ResultCallback;
 import com.nexflare.webkiosklibrary.Utils.Colleges;
@@ -81,6 +83,20 @@ public class LoginActivity extends AppCompatActivity {
                                     Toast.makeText(LoginActivity.this, "Some error occurred "+e.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             });
+                    JaypeeWebkiosk.getAttendanceApi().getAttendance(enroll.getText().toString(),
+                            dob.getText().toString(),
+                            password.getText().toString(),
+                            collegeSelect.getSelectedItem().toString()).addResultCallback(new ResultCallback<AttendanceResult>() {
+                        @Override
+                        public void onResult(AttendanceResult result) {
+                            Log.d("TAGGER", "onResult: "+ result.getAttendanceList());
+                        }
+
+                        @Override
+                        public void onError(Exception e) {
+                            Log.d("TAGGER", "onError: "+e.getMessage());
+                        }
+                    });
                 }
             }
         });

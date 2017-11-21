@@ -29,7 +29,7 @@ public class WebkioskAttendance implements WebkioskContract<AttendanceResult> {
     public WebkioskAttendance(){
         mResultHandler=new Handler(Looper.getMainLooper());
     }
-    public void getAttendance(final String enrollmentNumber, final String password, final String dateOfBirth, final String college){
+    public WebkioskAttendance getAttendance(final String enrollmentNumber, final String dateOfBirth,final String password, final String college){
         Thread thread=new Thread(){
             @Override
             public void run() {
@@ -114,6 +114,7 @@ public class WebkioskAttendance implements WebkioskContract<AttendanceResult> {
                 }
             }
         };
+        return this;
     }
     @Override
     public void addResultCallback(ResultCallback<AttendanceResult> resultCallback) {
